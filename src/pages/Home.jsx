@@ -1,10 +1,9 @@
-import '../styles/Home.css'
-
 
 function Home() {
-
+  
+  
     return (
-      <div className="home-container">
+      <div>
           <div className="welcome">
             <h1> Hi, </h1> <br />
             <h1> I'm Chloe. </h1> <br />
@@ -12,14 +11,12 @@ function Home() {
           </div>
 
           <div className="intro">
-            <div style={{ width: '43vw'}}>
-              <h2> A short introduction about myself. </h2> <br />
-              <p> My name is Chloe and I graduated from the <strong>Georgia Institute of Technology</strong> in <strong>May of 2024</strong> with a <strong>Bachelor’s in Computer Science</strong>, with the concentrations People & Media. </p>
+            <div style={{ width: '40vw'}}>
+              <h2> A short introduction about me. </h2> <br/>
+              <p> My name is Chloe and I graduated from the <strong>Georgia Institute of Technology</strong> in May of 2024 with a <strong>Bachelor’s in Computer Science</strong>, with the concentrations <strong>People & Media</strong>. </p>
             </div>
           </div>
-      </div>
-
-      
+      </div>   
     )
   }
   

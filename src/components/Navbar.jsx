@@ -38,7 +38,7 @@ function Navbar() {
                 <a href="/" className={activePage === '/' ? 'active' : ''}> Home </a>
                 <a href="/experience" className={activePage === '/experience' ? 'active' : ''}> Experience </a>
                 <a href="" target='_blank' rel="noreferrer"> Resume </a>
-                
+                                
             </nav>
 
             <button className="nav-btn nav-menu" onClick={showNavbar}> open </button>

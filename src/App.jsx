@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Experience from './pages/Experience'
+import ProjectPage from './pages/ProjectPage'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/experience" element={<Experience />} />
+          <Route path="/projects/:projectId" element={<ProjectPage />} />
 
         </Routes>
       </div>

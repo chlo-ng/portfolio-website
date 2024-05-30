@@ -1,5 +1,5 @@
 import React from "react";
-// import Resume from '../../static/ChloeNgResume.pdf';
+import Resume from '../../public/ChloeNgResume.pdf';
 import { useState } from "react";
 import { useRef } from "react";
 import { useLocation } from "react-router-dom";
@@ -37,7 +37,7 @@ function Navbar() {
 
                 <a href="/" className={activePage === '/' ? 'active' : ''}> Home </a>
                 <a href="/experience" className={activePage === '/experience' ? 'active' : ''}> Experience </a>
-                <a href="" target='_blank' rel="noreferrer"> Resume </a>
+                <a href={Resume} target='_blank' rel="noreferrer"> Resume </a>
                                 
             </nav>
 

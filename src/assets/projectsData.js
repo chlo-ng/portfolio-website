@@ -28,7 +28,7 @@ const projects = [
         type: 'DESIGN', 
         image: locateACleaner,
         startDate: '2022-01-01', 
-        description: 'A research project where my team and I delved into existing home-related technologies. Our end-product is a mobile app that assists users in tracking repetitive chores, guides for cleaning their household, and the main feature, locating a cleaner to hire. The main feature is essentially an Uber app specifically for cleaners, where cleaners can set up profiles, customers can hire them by radius, and also leave reviews after the job is done.',
+        description: 'A research project where my team and I delved into existing home-related technologies. Our end-product is a mobile app that assists users in tracking repetitive chores, guides for cleaning their household, and the main feature, locating a cleaner to hire. \n\nThe main feature is essentially an Uber app specifically for cleaners, where cleaners can set up profiles, customers can hire them by radius, and also leave reviews after the job is done.',
         tags: ['Figma', 'User Research', 'Prototyping', 'Wireframing'],
         figma: ''
 
@@ -66,7 +66,7 @@ const projects = [
         name: 'Carnival Escape',
         type: 'VIDEO GAME',
         startDate: '2024-02-01',
-        description: 'A 3D horror-themed maze game set in an abandoned carnival. The player must escape the carnival by finding the key to the exit door while avoiding the ghosts and solving puzzles.',
+        description: 'A 3D horror-themed maze game set in an abandoned carnival. The player must escape the carnival by finding the key to the exit door while avoiding the ghosts and solving puzzles.\n\nI developed the memory game portion from the ground up, implementing logic and data structures for win/lose conditions as well as original assets. I also worked on the game\'s checkpoint system and the UI for hints and guides.',
         tags: ['Unity', 'C#'],
         github: 'https://github.com/chlo-ng/carnival-escape'
     },
@@ -75,7 +75,7 @@ const projects = [
         name: 'Habit Tracker',
         type: 'MOBILE DEVELOPMENT',
         startDate: '2024-04-01',
-        description: "An app that allows the user to track their daily habits. Each habit will be represented as a progress bar. Logging a completed habit would increase a user's streak, leading to possible achievements. The user can make reminders for themselves if they are important.",
+        description: "This was my capstone project for CodePath's IOS101 Course in Spring 2024. I picked a habit tracker because it is something that I've wanted in digital form, since I used to bullet journal in a physical notebook before college.\n\nI planned for this app to allow the user to track their daily habits. Each habit will be represented as a progress bar. Logging a completed habit would increase a user's streak, leading to possible achievements. The user can make reminders for themselves if they are important.\n\nSo far, the application is in its early stages, but I plan to continue working on it in the future.",
         tags: ['Swift', 'Project Management', 'UI/UX Design'],
         github: 'https://github.com/chlo-ng/habit-tracker'
     },
@@ -84,7 +84,7 @@ const projects = [
         name: 'Mix n Munch',
         type: 'WEB DEVELOPMENT',
         startDate: '2024-01-01',
-        description: "This is a project that I did for the course CS 8803-CDP: Creative Design Practices that I took in Georgia Tech. The idea was to create a tool that generates concepts utilizing the 'art of chance'. This means that randomization and letting the generated results be out of both the developer and user's control is highly recommended. To do that, we were assigned to develop a webpage that loads words or phrases from three categories into a phrase or sentence that expresses a novel idea... within 10 days.",
+        description: "This is a project that I did for the course CS 8803-CDP: Creative Design Practices that I took in Georgia Tech. \n\nThe idea was to create a tool that generates concepts utilizing the 'art of chance'. This means that randomization and letting the generated results be out of both the developer and user's control is highly recommended. \n\nTo do that, we were assigned to develop a webpage that loads words or phrases from three categories into a phrase or sentence that expresses a novel idea... within 10 days.",
         tags: ['HTML/CSS', 'JavaScript', 'EdamamAPI'],
         github: 'https://github.com/chlo-ng/mixnmunch'
     }

@@ -6,7 +6,6 @@ import { Link } from "react-router-dom"
 function Projects() {
 
     const [filter, setFilter] = useState('ALL')
-    const [displayCount, setDisplayCount] = useState(3)
 
     const projectTypes = ['ALL', 'WEB DEVELOPMENT', 'DESIGN', 'VIDEO GAME', 'MOBILE DEVELOPMENT']
 
@@ -15,7 +14,7 @@ function Projects() {
     
 
     const [currentPage, setCurrentPage] = useState(1);
-    const projectsPerPage = 3;
+    const projectsPerPage = 4;
     const indexOfLastProject = currentPage * projectsPerPage;
     const indexOfFirstProject = indexOfLastProject - projectsPerPage;
 
@@ -25,9 +24,9 @@ function Projects() {
                 Latest Projects.
             </h1>
 
-            <div>
+            <div style={{ marginTop: '2.5em'}}>
                 {projectTypes.map(type => (
-                    <button key={type} onClick={() => setFilter(type)} className={`filterButton ${filter === type ? 'selected' : ''}`}>
+                    <button key={type} onClick={() => setFilter(type)} className={`transparentButton${filter === type ? ' selected' : ''}`}>
                         {type}
                     </button>
                 ))}
@@ -39,7 +38,7 @@ function Projects() {
                         <Link to={`/projects/${project.key}`}>
                             <div className="project">
                                 <img src={project.image} />
-                                <h3>{project.name}</h3>
+                                <h4>{project.name}</h4>
                             </div>
                         </Link>
                     </CSSTransition>
@@ -47,8 +46,8 @@ function Projects() {
             </TransitionGroup>
             
             <div>
-                <button onClick={() => setCurrentPage(currentPage - 1)} disabled={currentPage === 1} className="paginationButton">Previous</button>
-                <button onClick={() => setCurrentPage(currentPage + 1)} disabled={currentPage === Math.ceil(sortedProjects.length / projectsPerPage)} className="paginationButton">Next</button> 
+                <button onClick={() => setCurrentPage(currentPage - 1)} disabled={currentPage === 1} className={`borderedButton${currentPage === 1 ? ' disabled' : ''}`}>Previous</button>
+                <button onClick={() => setCurrentPage(currentPage + 1)} disabled={currentPage === Math.ceil(sortedProjects.length / projectsPerPage)} className={`borderedButton${currentPage === Math.ceil(sortedProjects.length / projectsPerPage) ? ' disabled' : ''}`}>Next</button> 
             </div>
 
         </div>

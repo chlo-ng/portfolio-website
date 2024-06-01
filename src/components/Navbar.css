@@ -14,7 +14,6 @@ header nav {
     justify-content: flex-end;
 
     background: transparent;
-    box-shadow: 0 10px 30px -10px var(--footer);
 }
 
 /* header nav.active {
@@ -27,16 +26,18 @@ nav a {
     background: transparent;
     text-decoration: none;
 
-    font-family: var(--font-mono);
+    font-family: var(--font-sans-serif);
     color: var(--primary-color);
     font-size: 1em;
 
     padding: .5em .5em;
     display: flex;
+    transition: var(--transition-out);  
 }
 
 nav a:hover {
-    color: var(--secondary-color);
+    transition: var(--transition-in);  
+    font-weight: 800;
 }
 
 nav a.active {

@@ -50,6 +50,10 @@ body > div {
 }
 
 /* GENERAL STYLES */
+div {
+  width: 100vw;
+}
+
 button {
   font-size: var(--font-xs);
 }

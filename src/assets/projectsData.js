@@ -66,7 +66,7 @@ const projects = [
         name: 'Carnival Escape',
         type: 'VIDEO GAME',
         startDate: '2024-02-01',
-        description: 'A 3D horror-themed maze game set in an abandoned carnival. The player must escape the carnival by finding the key to the exit door while avoiding the ghosts and solving puzzles.\n\nI developed the memory game portion from the ground up, implementing logic and data structures for win/lose conditions as well as original assets. I also worked on the game\'s checkpoint system and the UI for hints and guides.',
+        description: 'A 3D horror-themed maze game set in an abandoned carnival. The player must escape the carnival by finding the key to the exit door while avoiding the ghosts and solving puzzles.\n\nI developed the memory game portion from the ground up, implementing logic and data structures for win/lose conditions as well as original assets. I also worked on the game\'s checkpoint system and the UI for hints and guides.\n\nThrough this experience, I also got the chance to lead user testing sessions and gather feedback for the game.',
         tags: ['Unity', 'C#'],
         github: 'https://github.com/chlo-ng/carnival-escape'
     },

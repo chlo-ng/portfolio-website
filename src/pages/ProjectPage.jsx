@@ -14,6 +14,7 @@ function ProjectPage({ match }) {
             <h2>{project.name}</h2>
             <p>{project.description}</p>
             {/* other project details... */}
+            <button><a href="/experience">Back</a></button>
         </div>
     );
 }

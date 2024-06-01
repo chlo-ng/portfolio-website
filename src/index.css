@@ -139,7 +139,7 @@ ul {
 
 /* MEDIA QUERIES (MEDIUM DEVICES) */
 @media screen and (max-width: 1024px) {
-  .container {
+  div{
     width: var(--container-width-md);
   }
 
@@ -150,7 +150,7 @@ ul {
 
 /* MEDIA QUERIES (SMALL DEVICES) */
 @media screen and (max-width: 600px) {
-  .container {
+  div {
     width: var(--container-width-sm);
   }
 

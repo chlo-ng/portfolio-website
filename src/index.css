@@ -12,13 +12,12 @@
   --font-sans-serif: "Karla", sans-serif;
   --font-serif: "Averia Serif Libre", serif;
   --font-mono: "Space Mono", monospace;
-  
 
-  --background: #F6E6E6;
+  --background: #f6e6e6;
   --secondary-background: #fff7ea;
   --primary-color: #383857;
-  --secondary-color: #8E5572;
-  --tertiary-color: #F7C59F;
+  --secondary-color: #8e5572;
+  --tertiary-color: #f7c59f;
 
   --font-xxl: 5rem;
   --font-xl: 3rem;
@@ -26,7 +25,7 @@
   --font-md: 1.3rem;
   --font-sm: 1.1rem;
   --font-xs: 0.97rem;
-  --font-xxs: .75rem;
+  --font-xxs: 0.75rem;
 
   --transition-in: all 400ms ease;
   --transition-out: all 250ms ease;
@@ -63,7 +62,6 @@ button:hover {
   cursor: pointer;
 }
 
-
 h1 {
   font-family: var(--font-serif);
   font-size: var(--font-xxl);
@@ -95,12 +93,12 @@ h4 {
 p {
   font-family: var(--font-sans-serif);
   font-size: var(--font-sm);
-  color: #2C2C34;
+  color: #2c2c34;
 }
 
 hr {
   border: none; /* Remove default border */
-  border-top: .5px solid var(--secondary-color); /* Add a top border */
+  border-top: 0.5px solid var(--secondary-color); /* Add a top border */
   width: 20vw;
   margin: 0;
 }
@@ -136,10 +134,9 @@ ul {
   font-size: var(--font-xs);
 } */
 
-
 /* MEDIA QUERIES (MEDIUM DEVICES) */
 @media screen and (max-width: 1024px) {
-  div{
+  div {
     width: var(--container-width-md);
   }
 
@@ -158,5 +155,3 @@ ul {
     margin-top: 2rem;
   }
 }
-
-

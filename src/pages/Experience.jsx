@@ -1,14 +1,13 @@
-import Projects from "../components/Projects"
+import Projects from "../components/Projects";
 
 function Experience() {
-
-    return (
-      <div>
-          <div className="experience">
-            <Projects />
-          </div>
+  return (
+    <div>
+      <div className="experience">
+        <Projects />
       </div>
-    )
-  }
-  
-  export default Experience
+    </div>
+  );
+}
+
+export default Experience;

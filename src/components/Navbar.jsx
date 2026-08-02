@@ -33,30 +33,25 @@ function Navbar() {
     <header>
       <nav ref={navRef} className={navBar ? "active" : ""}>
         <button className="nav-btn nav-close" onClick={showNavbar}>
-          {" "}
-          close{" "}
+          close
         </button>
 
         <a href="/" className={activePage === "/" ? "active" : ""}>
-          {" "}
-          Home{" "}
+          Home
         </a>
         <a
           href="/experience"
           className={activePage === "/experience" ? "active" : ""}
         >
-          {" "}
-          Experience{" "}
+          Experience
         </a>
         <a href={Resume} target="_blank" rel="noreferrer">
-          {" "}
-          Resume{" "}
+          Resume
         </a>
       </nav>
 
       <button className="nav-btn nav-menu" onClick={showNavbar}>
-        {" "}
-        open{" "}
+        open
       </button>
     </header>
   );

@@ -1,3 +1,47 @@
+/* THEMING AND HTML COMPONENT STYLES */
+@import "tailwindcss";
+
+@theme {
+  --color-primary-background: #f6e6e6;
+  --color-secondary-background: #fff7ea;
+  --color-primary: #383857;
+  --color-secondary: #8e5572;
+  --color-tertiary: #f7c59f;
+  --font-sans-serif: "Karla", sans-serif;
+  --font-serif: "Averia Serif Libre", serif;
+  --font-mono: "Space Mono", monospace;
+}
+
+@layer components {
+  h1 {
+    @apply font-serif text-4xl text-primary font-light;
+  }
+
+  h2 {
+    @apply font-serif text-3xl text-primary font-light;
+  }
+
+  h3 {
+    @apply font-mono text-xl font-light;
+  }
+
+  h4 {
+    @apply font-mono text-lg font-thin;
+  }
+
+  p,
+  span {
+    @apply font-sans-serif text-xl text-[#2c2c34];
+  }
+
+  .primary-container {
+    @apply flex flex-col justify-center items-center min-h-screen gap-3 bg-primary-background;
+  }
+  .secondary-container {
+    @apply flex flex-col justify-center items-center min-h-screen gap-3 bg-secondary-background;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,99 +52,35 @@
   text-decoration: none;
 }
 
-:root {
-  --font-sans-serif: "Karla", sans-serif;
-  --font-serif: "Averia Serif Libre", serif;
-  --font-mono: "Space Mono", monospace;
-
-  --background: #f6e6e6;
-  --secondary-background: #fff7ea;
-  --primary-color: #383857;
-  --secondary-color: #8e5572;
-  --tertiary-color: #f7c59f;
-
-  --font-xxl: 5rem;
-  --font-xl: 3rem;
-  --font-lg: 2rem;
-  --font-md: 1.3rem;
-  --font-sm: 1.1rem;
-  --font-xs: 0.97rem;
-  --font-xxs: 0.75rem;
-
-  --transition-in: all 400ms ease;
-  --transition-out: all 250ms ease;
-
-  --container-width-lg: 75%;
-  --container-width-md: 86%;
-  --container-width-sm: 90%;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar {
+.element-class {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Chrome, Safari, Opera, and Newer Edge */
+.element-class::-webkit-scrollbar {
   display: none;
 }
 
 body > div {
-  line-height: 1.7rem;
-  background-color: var(--background);
+  @apply max-w-screen;
 }
 
 /* GENERAL STYLES */
-div {
-  width: 100vw;
-  margin: 0;
-}
-
 button {
-  font-size: var(--font-xs);
+  @apply text-xs;
 }
 
 button:hover {
   cursor: pointer;
 }
 
-h1 {
-  font-family: var(--font-serif);
-  font-size: var(--font-xxl);
-  color: var(--primary-color);
-  font-weight: 200;
-}
-
-h2 {
-  font-family: var(--font-serif);
-  font-size: var(--font-lg);
-  color: var(--primary-color);
-  font-weight: 300;
-}
-
-h3 {
-  font-family: var(--font-mono);
-  font-size: var(--font-sm);
-  color: var(--secondary-color);
-  font-weight: 300;
-}
-
-h4 {
-  font-family: var(--font-mono);
-  font-size: var(--font-xs);
-  color: var(--secondary-color);
-  font-weight: 100;
-}
-
-p {
-  font-family: var(--font-sans-serif);
-  font-size: var(--font-sm);
-  color: #2c2c34;
-}
-
 hr {
-  border: none; /* Remove default border */
-  border-top: 0.5px solid var(--secondary-color); /* Add a top border */
-  width: 20vw;
-  margin: 0;
+  @apply border-t border-secondary w-[20vw] m-0;
 }
 
 section {
@@ -137,7 +117,7 @@ ul {
 /* MEDIA QUERIES (MEDIUM DEVICES) */
 @media screen and (max-width: 1024px) {
   div {
-    width: var(--container-width-md);
+    width: var(--container-md);
   }
 
   section {
@@ -148,7 +128,7 @@ ul {
 /* MEDIA QUERIES (SMALL DEVICES) */
 @media screen and (max-width: 600px) {
   div {
-    width: var(--container-width-sm);
+    width: var(--container-sm);
   }
 
   section {

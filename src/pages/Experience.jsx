@@ -3,7 +3,7 @@ import Projects from "../components/Projects";
 function Experience() {
   return (
     <div>
-      <div className="experience">
+      <div className="primary-container">
         <Projects />
       </div>
     </div>

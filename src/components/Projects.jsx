@@ -1,18 +1,20 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import projects from "../assets/projectsData";
 import { Link } from "react-router-dom";
 
+const PROJECTS_PER_PAGE = 4;
+
+const PROJECT_TYPES = [
+  "ALL",
+  "WEB DEVELOPMENT",
+  // "MOBILE DEVELOPMENT",
+  "DESIGN",
+  // "VIDEO GAME",
+];
+
 function Projects() {
   const [filter, setFilter] = useState("ALL");
-
-  const projectTypes = [
-    "ALL",
-    "WEB DEVELOPMENT",
-    "DESIGN",
-    "VIDEO GAME",
-    "MOBILE DEVELOPMENT",
-  ];
 
   const filteredProjects =
     filter === "ALL"
@@ -23,22 +25,40 @@ function Projects() {
   );
 
   const [currentPage, setCurrentPage] = useState(1);
-  const projectsPerPage = 4;
-  const indexOfLastProject = currentPage * projectsPerPage;
-  const indexOfFirstProject = indexOfLastProject - projectsPerPage;
+  const indexOfLastProject = useMemo(() => {
+    return currentPage * PROJECTS_PER_PAGE;
+  }, [currentPage]);
+  const indexOfFirstProject = useMemo(() => {
+    return indexOfLastProject - PROJECTS_PER_PAGE;
+  }, [indexOfLastProject]);
+  const hidePrevButton = useMemo(() => {
+    return currentPage === 1;
+  }, [currentPage]);
+  const hideNextButton = useMemo(() => {
+    return (
+      sortedProjects.length <= PROJECTS_PER_PAGE ||
+      currentPage === Math.ceil(sortedProjects.length / PROJECTS_PER_PAGE)
+    );
+  }, [currentPage, sortedProjects]);
 
   return (
-    <div className="projects">
+    <div className="flex flex-col gap-6">
       <h1>Latest Projects.</h1>
 
-      <div style={{ marginTop: "2.5em" }}>
-        {projectTypes.map((type) => (
+      <div className="flex gap-5">
+        {PROJECT_TYPES.map((type) => (
           <button
             key={type}
             onClick={() => setFilter(type)}
-            className={`transparentButton${filter === type ? " selected" : ""}`}
+            className="project-nav-button"
           >
-            {type}
+            <span
+              className={`underline-offset-4 transition-all hover:underline hover:text-secondary ${
+                filter === type ? "font-semibold underline" : "no-underline"
+              }`}
+            >
+              {type}
+            </span>
           </button>
         ))}
       </div>
@@ -59,22 +79,14 @@ function Projects() {
       </TransitionGroup>
 
       <div>
-        <button
-          onClick={() => setCurrentPage(currentPage - 1)}
-          disabled={currentPage === 1}
-          className={`borderedButton${currentPage === 1 ? " disabled" : ""}`}
-        >
-          Previous
-        </button>
-        <button
-          onClick={() => setCurrentPage(currentPage + 1)}
-          disabled={
-            currentPage === Math.ceil(sortedProjects.length / projectsPerPage)
-          }
-          className={`borderedButton${currentPage === Math.ceil(sortedProjects.length / projectsPerPage) ? " disabled" : ""}`}
-        >
-          Next
-        </button>
+        {!hidePrevButton && (
+          <button onClick={() => setCurrentPage(currentPage - 1)}>
+            Previous
+          </button>
+        )}
+        {!hideNextButton && (
+          <button onClick={() => setCurrentPage(currentPage + 1)}>Next</button>
+        )}
       </div>
     </div>
   );

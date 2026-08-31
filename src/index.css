@@ -1,5 +1,7 @@
 /* THEMING AND HTML COMPONENT STYLES */
 @import "tailwindcss";
+@import "lenis/dist/lenis.css";
+@import "./styles.css";
 
 @theme {
   --color-primary-background: #f6e6e6;
@@ -7,9 +9,9 @@
   --color-primary: #383857;
   --color-secondary: #8e5572;
   --color-tertiary: #f7c59f;
-  --font-sans-serif: "Karla", sans-serif;
+  --font-sans-serif: "DM Sans", sans-serif;
   --font-serif: "Averia Serif Libre", serif;
-  --font-mono: "Space Mono", monospace;
+  --font-mono: "Roboto Mono", monospace;
 }
 
 @layer components {
@@ -77,6 +79,12 @@ section {
   margin: 8rem;
 }
 
+/* full-viewport scroll-snap sections on the home page: stack edge-to-edge */
+section.scroll-section {
+  margin: 0;
+  min-height: 100vh;
+}
+
 /* a {
   color: var(--secondary-color);
   text-decoration: none;
@@ -106,10 +114,6 @@ ul {
 
 /* MEDIA QUERIES (MEDIUM DEVICES) */
 @media screen and (max-width: 1024px) {
-  div {
-    width: var(--container-md);
-  }
-
   section {
     margin-top: 6rem;
   }
@@ -117,10 +121,6 @@ ul {
 
 /* MEDIA QUERIES (SMALL DEVICES) */
 @media screen and (max-width: 600px) {
-  div {
-    width: var(--container-sm);
-  }
-
   section {
     margin-top: 2rem;
   }

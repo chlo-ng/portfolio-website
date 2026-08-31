@@ -1,36 +1,13 @@
-@import "tailwindcss";
+/* No `@import "tailwindcss"` here — this file is pulled into index.css so that
+   it shares the single Tailwind root and can see the @theme variables. */
 
 @layer components {
+  .skill-chip {
+    @apply rounded-full bg-secondary px-3 py-1 text-sm text-secondary-background;
+  }
+
   .project-nav-button {
     @apply m-1 items-center bg-transparent px-2 py-1 text-base text-secondary transition-all duration-300 ease-in-out;
-  }
-
-  .project-list {
-    @apply flex w-full flex-row justify-center gap-8;
-  }
-
-  .project {
-    @apply block w-[200px] transition-all duration-300 ease-in-out;
-  }
-
-  .project:hover {
-    @apply -translate-y-1 scale-105;
-  }
-
-  .project img {
-    @apply h-[200px] w-[200px] object-cover transition-transform duration-300 ease-in-out;
-  }
-
-  .project:hover img {
-    @apply scale-105;
-  }
-
-  .project h4 {
-    @apply mt-3 text-primary transition-colors duration-300 ease-in-out;
-  }
-
-  .project:hover h4 {
-    @apply text-secondary;
   }
 
   .borderedButton {

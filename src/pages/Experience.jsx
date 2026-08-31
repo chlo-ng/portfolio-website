@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { experience, skills } from "../assets/experienceData";
+import SkillChip from "../components/SkillChip";
 
 function Experience() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -9,7 +10,7 @@ function Experience() {
     <div className="flex w-full flex-col items-center gap-12 py-20">
       <h1>Experience.</h1>
 
-      <div className="flex w-[min(900px,90vw)] flex-col gap-10">
+      <div className="flex w-[min(800px,90vw)] flex-col gap-10">
         <div className="flex flex-col gap-8 sm:flex-row">
           {/* company tab list */}
           <div
@@ -27,7 +28,7 @@ function Experience() {
                 className={`whitespace-nowrap border-b-2 px-4 py-2 text-left transition-all duration-300 sm:border-b-0 sm:border-r-2 sm:border-r-transparent`}
               >
                 <span
-                  className={`font-mono text-sm text-primary hover:text-secondary ${
+                  className={`font-mono text-base text-primary hover:text-secondary ${
                     activeIndex === i
                       ? "border-primary font-medium"
                       : "border-transparent"
@@ -41,17 +42,17 @@ function Experience() {
 
           {/* active job panel */}
           <div role="tabpanel" className="flex-1">
-            <h4 className="text-primary font-semibold">
+            <h3 className="text-primary font-semibold">
               {active.role}
               <span className="text-secondary"> @ {active.company}</span>
-            </h4>
-            <span className="mt-1 block font-mono text-sm text-secondary">
+            </h3>
+            <span className="mt-1 block font-mono text-base text-secondary">
               {active.range}
               {active.location ? ` · ${active.location}` : ""}
             </span>
             <ul className="mt-5 flex list-disc flex-col gap-3 pl-5 text-slate-700">
               {active.points.map((point) => (
-                <li key={point} className="text-left text-lg leading-relaxed">
+                <li key={point} className="text-left leading-relaxed text-md">
                   {point}
                 </li>
               ))}
@@ -59,9 +60,7 @@ function Experience() {
             <div className="mt-8">
               <div className="flex w-full justify-start gap-3">
                 {(active.skills ?? skills).map((skill) => (
-                  <span key={skill} className="skill-chip">
-                    {skill}
-                  </span>
+                  <SkillChip key={skill} skill={skill} />
                 ))}
               </div>
             </div>

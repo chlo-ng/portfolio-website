@@ -1,42 +1,5 @@
 const projects = [
   // {
-  //   key: 1,
-  //   name: "Clutch-It",
-  //   type: "WEB DEVELOPMENT",
-  //   startDate: "2022-02-01",
-  //   description:
-  //     "A website that displays tips and tricks for an first-person shooter game, Valorant. Focused on UI/UX designing and front-end development.",
-  //   tags: [
-  //     "React",
-  //     "HTML/CSS",
-  //     "JavaScript",
-  //     "Figma",
-  //     "Bootstrap",
-  //     "Wireframing",
-  //   ],
-  // },
-  // {
-  //   key: 2,
-  //   name: "Paw-champ",
-  //   type: "WEB DEVELOPMENT",
-  //   startDate: "2022-01-01",
-  //   image: "/images/pawchampImage.jpeg",
-  //   description:
-  //     "A website that promotes pet adoption in shelters, by having a fun feature that displays random cat and/or dog facts. Users are able to search through a database of adoption shelters on our website. They can also enhance the search results by filtering shelters by their state or zip code.",
-  //   tags: ["HTML/CSS", "JavaScript", "Python", "Flask", "Twilio API"],
-  // },
-  // {
-  //   key: 3,
-  //   name: "Locate-A-Cleaner",
-  //   type: "DESIGN",
-  //   image: "/images/locateACleaner.png",
-  //   startDate: "2022-01-01",
-  //   description:
-  //     "A research project where my team and I delved into existing home-related technologies. Our end-product is a mobile app that assists users in tracking repetitive chores, guides for cleaning their household, and the main feature, locating a cleaner to hire. \n\nThe main feature is essentially an Uber app specifically for cleaners, where cleaners can set up profiles, customers can hire them by radius, and also leave reviews after the job is done.",
-  //   tags: ["Figma", "User Research", "Prototyping", "Wireframing"],
-  //   figma: "",
-  // },
-  // {
   //   key: 4,
   //   name: "Student Resiliency Tool",
   //   type: "WEB DEVELOPMENT",
@@ -58,19 +21,7 @@ const projects = [
   //   figma:
   //     "https://www.figma.com/file/Z3hz2JgYW8fD75GRAlEIHM/Campus-Discovery?type=design&node-id=0-1&mode=design&t=tXT2VZNDVN9ecgPt-0",
   // },
-  {
-    key: 6,
-    name: "Roam: Travel App",
-    type: "WEB DEVELOPMENT",
-    highlight: true,
-    startDate: "2023-09-01",
-    description:
-      "a user-centric website dedicated to logging users' travel wishlists and travel history.",
-    tags: ["React", "HTML/CSS", "JavaScript", "MongoDB", "Google Maps API"],
-    figma:
-      "https://www.figma.com/file/DuVtVOqCbWOcyxDEdFvN2X/Roam-App-Design?type=design&node-id=270-1218&mode=design&t=mMNIlqbRma6KkB8n-0",
-    github: "https://github.com/michelle692/roam",
-  },
+
   // {
   //   key: 7,
   //   name: "Carnival Escape",
@@ -81,35 +32,72 @@ const projects = [
   //   tags: ["Unity", "C#"],
   //   github: "https://github.com/chlo-ng/carnival-escape",
   // },
-  {
-    key: 8,
-    name: "Habit Tracker",
-    type: "MOBILE DEVELOPMENT",
-    highlight: true,
-    startDate: "2024-04-01",
-    description:
-      "This was my capstone project for CodePath's IOS101 Course in Spring 2024. I picked a habit tracker because it is something that I've wanted in digital form, since I used to bullet journal in a physical notebook before college.\n\nI planned for this app to allow the user to track their daily habits. Each habit will be represented as a progress bar. Logging a completed habit would increase a user's streak, leading to possible achievements. The user can make reminders for themselves if they are important.\n\nSo far, the application is in its early stages, but I plan to continue working on it in the future.",
-    tags: ["Swift", "Project Management", "UI/UX Design"],
-    github: "https://github.com/chlo-ng/habit-tracker",
-  },
+  // {
+  //   key: 8,
+  //   name: "Habit Tracker",
+  //   type: "MOBILE DEVELOPMENT",
+  //   highlight: true,
+  //   startDate: "2024-04-01",
+  //   description:
+  //     "This was my capstone project for CodePath's IOS101 Course in Spring 2024. I picked a habit tracker because it is something that I've wanted in digital form, since I used to bullet journal in a physical notebook before college.\n\nI planned for this app to allow the user to track their daily habits. Each habit will be represented as a progress bar. Logging a completed habit would increase a user's streak, leading to possible achievements. The user can make reminders for themselves if they are important.\n\nSo far, the application is in its early stages, but I plan to continue working on it in the future.",
+  //   tags: ["Swift", "Project Management", "UI/UX Design"],
+  //   github: "https://github.com/chlo-ng/habit-tracker",
+  // },
+  // {
+  //   key: 9,
+  //   name: "Mix n Munch",
+  //   type: "WEB DEVELOPMENT",
+  //   highlight: true,
+  //   startDate: "2024-01-01",
+  //   description:
+  //     "This is a project that I did for the course CS 8803-CDP: Creative Design Practices that I took in Georgia Tech. \n\nThe idea was to create a tool that generates concepts utilizing the 'art of chance'. This means that randomization and letting the generated results be out of both the developer and user's control is highly recommended. \n\nTo do that, we were assigned to develop a webpage that loads words or phrases from three categories into a phrase or sentence that expresses a novel idea... within 10 days.",
+  //   tags: ["HTML/CSS", "JavaScript", "EdamamAPI"],
+  //   github: "https://github.com/chlo-ng/mixnmunch",
+  // },
   {
     key: 9,
-    name: "Mix n Munch",
-    type: "WEB DEVELOPMENT",
+    name: "Breakbook",
     highlight: true,
-    startDate: "2024-01-01",
-    description:
-      "This is a project that I did for the course CS 8803-CDP: Creative Design Practices that I took in Georgia Tech. \n\nThe idea was to create a tool that generates concepts utilizing the 'art of chance'. This means that randomization and letting the generated results be out of both the developer and user's control is highly recommended. \n\nTo do that, we were assigned to develop a webpage that loads words or phrases from three categories into a phrase or sentence that expresses a novel idea... within 10 days.",
-    tags: ["HTML/CSS", "JavaScript", "EdamamAPI"],
-    github: "https://github.com/chlo-ng/mixnmunch",
+    type: "WEB DEVELOPMENT",
+    startDate: "2026-09-01",
+    description: "Development in progress.",
+    tags: ["React Native", "Javascript"],
+    // github: "https://github.com/michelle692/foaf",
+    url: "https://breakbook.kulkoen.com",
   },
   {
     key: 10,
     name: "Friend of a Friend (FOAF)",
+    highlight: true,
     type: "WEB DEVELOPMENT",
-    startDate: "2024-11-01",
-    description: "",
-    github: "https://github.com/chlo-ng/mixnmunch",
+    startDate: "2024-12-01",
+    image: "/images/foaf.png",
+    description:
+      "A brand site, ticketing platform, and event calendar built for Friend of a Friend, a group hosting social events that spark new friendships for anyone looking to find their people.",
+    tags: ["React", "HTML/CSS", "Javascript", "Database Systems", "Firebase"],
+    github: "https://github.com/michelle692/foaf",
+  },
+  {
+    key: 11,
+    name: "Roam: Travel App",
+    type: "WEB DEVELOPMENT",
+    highlight: true,
+    startDate: "2023-09-01",
+    image: "/images/roam.png",
+    description:
+      "A user-centric website dedicated to logging users' travel wishlists and travel history.",
+    tags: [
+      "React",
+      "HTML/CSS",
+      "Javascript",
+      "Figma",
+      "MongoDB",
+      "Google Maps API",
+    ],
+    figma:
+      "https://www.figma.com/file/DuVtVOqCbWOcyxDEdFvN2X/Roam-App-Design?type=design&node-id=270-1218&mode=design&t=mMNIlqbRma6KkB8n-0",
+    github: "https://github.com/michelle692/roam",
+    url: "https://roam-the-world.vercel.app/",
   },
 ];
 

@@ -2,9 +2,9 @@
    it shares the single Tailwind root and can see the @theme variables. */
 
 @layer components {
-  .skill-chip {
+  /* .skill-chip {
     @apply rounded-full bg-secondary px-3 py-1 text-sm text-secondary-background;
-  }
+  } */
 
   .project-nav-button {
     @apply m-1 items-center bg-transparent px-2 py-1 text-base text-secondary transition-all duration-300 ease-in-out;

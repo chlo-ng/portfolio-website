@@ -10,9 +10,9 @@ const experience = [
     location: "Hybrid",
     range: "August 2024 — Present",
     points: [
-      "Short summary of your impact. Each string becomes a bullet point.",
-      "Describe a second thing you built or owned.",
-      "Mention a metric or outcome if you have one.",
+      "Take applications from concept to delivery in 3-6 months, keeping clients in the loop every step of the way.",
+      "Trusted by C-suite executives to build company-wide applications that meet a high bar for quality.",
+      "Staying adaptable as tools, priorities, and client needs shift — always ready to learn on the fly.",
     ],
     skills: [
       "React",
@@ -31,8 +31,8 @@ const experience = [
     location: "Richmond, VA",
     range: "June — August 2023",
     points: [
-      "Another bullet describing your responsibilities.",
-      "A second bullet for this role.",
+      "First to test and implement a new company-built UI library, setting the standard for how the rest of the team would build.",
+      "Improved a middleware tool between new inventory uploads and the live site, cutting validation time from up to an hour to less than 20 minutes.",
     ],
     skills: ["React", "Typescript", "C#", "Agile"],
   },

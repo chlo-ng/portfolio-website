@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useLenis } from "../lenis/LenisProvider";
 
-import "./Navbar.css";
+import "../assets/Navbar.css";
 
 const NAV_LINKS = [
   { id: "about", label: "About" },

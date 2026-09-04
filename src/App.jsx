@@ -20,7 +20,7 @@ function App() {
         @import
         url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
       </style>
-      <div>
+      <div className="pb-16 xl:pb-0">
         <LenisProvider>
           <Navbar />
           <SocialsBar />

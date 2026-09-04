@@ -60,9 +60,12 @@ const projects = [
     highlight: true,
     type: "WEB DEVELOPMENT",
     startDate: "2026-09-01",
-    description: "Development in progress.",
-    tags: ["React Native", "Javascript"],
+    description:
+      "A practice journal to assist breakdancers with moves that they are practicing and learning.\nDevelopment in progress.",
+    tags: ["Figma", "UI/UX", "Digital Marketing"],
     // github: "https://github.com/michelle692/foaf",
+    figma:
+      "https://www.figma.com/design/HXJb1lpxFqzsjQi4V3Ht6c/Low-Fidelity-Wireframes?node-id=0-1&t=9esgCTB4w9C8Nspz-1",
     url: "https://breakbook.kulkoen.com",
   },
   {
@@ -94,8 +97,8 @@ const projects = [
       "MongoDB",
       "Google Maps API",
     ],
-    figma:
-      "https://www.figma.com/file/DuVtVOqCbWOcyxDEdFvN2X/Roam-App-Design?type=design&node-id=270-1218&mode=design&t=mMNIlqbRma6KkB8n-0",
+    // figma:
+    //   "https://www.figma.com/file/DuVtVOqCbWOcyxDEdFvN2X/Roam-App-Design?type=design&node-id=270-1218&mode=design&t=mMNIlqbRma6KkB8n-0",
     github: "https://github.com/michelle692/roam",
     url: "https://roam-the-world.vercel.app/",
   },

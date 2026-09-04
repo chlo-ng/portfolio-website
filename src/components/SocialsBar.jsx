@@ -34,25 +34,49 @@ function SocialIcon({ name }) {
 
 function SocialsBar() {
   return (
-    <div
-      className="fixed left-12 top-1/2 z-20 hidden -translate-y-1/2 md:block"
-      aria-label="Social links"
-    >
-      <div className="flex flex-col items-center gap-4 rounded-4xl bg-white/40 p-4 shadow-sm">
-        {SOCIALS.map((social) => (
-          <a
-            key={social.name}
-            href={social.href}
-            target="_blank"
-            rel="noreferrer"
-            aria-label={social.label}
-            className="text-secondary transition-all duration-300 hover:-translate-y-0.5 hover:text-primary"
-          >
-            <SocialIcon name={social.name} />
-          </a>
-        ))}
+    <>
+      {/* desktop: vertical rail on the left edge */}
+      <div
+        className="fixed left-6 top-1/2 z-20 hidden -translate-y-1/2 xl:block"
+        aria-label="Social links"
+      >
+        <div className="flex flex-col items-center gap-4 rounded-4xl bg-white/40 p-4 shadow-sm">
+          {SOCIALS.map((social) => (
+            <a
+              key={social.name}
+              href={social.href}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={social.label}
+              className="text-secondary transition-all duration-300 hover:-translate-y-0.5 hover:text-primary"
+            >
+              <SocialIcon name={social.name} />
+            </a>
+          ))}
+        </div>
       </div>
-    </div>
+
+      {/* mobile/tablet: fixed bottom bar so socials stay visible on small screens */}
+      <div
+        className="fixed inset-x-0 bottom-0 z-20 flex justify-center px-4 pb-3 xl:hidden"
+        aria-label="Social links"
+      >
+        <div className="flex items-center gap-6 rounded-full bg-white/40 px-6 py-2.5 shadow-sm backdrop-blur">
+          {SOCIALS.map((social) => (
+            <a
+              key={social.name}
+              href={social.href}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={social.label}
+              className="text-secondary transition-all duration-300 hover:scale-110 hover:text-primary"
+            >
+              <SocialIcon name={social.name} />
+            </a>
+          ))}
+        </div>
+      </div>
+    </>
   );
 }
 
